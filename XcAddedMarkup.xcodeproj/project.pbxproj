@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C025637160A1D20002B9FC4 /* XcAddedMarkupPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C025636160A1D20002B9FC4 /* XcAddedMarkupPlugin.m */; };
+		4C0D90F3160A32690068141C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0D90F2160A32690068141C /* Cocoa.framework */; };
+		4C0D90FD160A32690068141C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C0D90FB160A32690068141C /* InfoPlist.strings */; };
+		4C0D90FF160A32690068141C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D90FE160A32690068141C /* main.m */; };
+		4C0D9109160A32690068141C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0D9107160A32690068141C /* MainMenu.xib */; };
+		4C0D910F160A34710068141C /* AttachEmbeddedImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D910E160A34710068141C /* AttachEmbeddedImages.m */; };
+		4C0D9110160A34710068141C /* AttachEmbeddedImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D910E160A34710068141C /* AttachEmbeddedImages.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4C22B26C160B3A990071792F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D9105160A32690068141C /* AppDelegate.m */; };
+		4C6C4A111851C3FA00DF8A67 /* XcodeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3FB1609137E00C3E6B9 /* XcodeColors.m */; };
+		4C83B7EF160A4B9200E570DE /* SimpleBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */; };
+		4CBCF3F41609137400C3E6B9 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBCF3EF1609136200C3E6B9 /* AppKit.framework */; };
+		4CBCF3F51609137400C3E6B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBCF3F01609136200C3E6B9 /* Foundation.framework */; };
+		4CBCF3FC1609137E00C3E6B9 /* SimpleBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */; };
+		4CBCF3FD1609137E00C3E6B9 /* XcodeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3FB1609137E00C3E6B9 /* XcodeColors.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4C025635160A1D20002B9FC4 /* XcAddedMarkupPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcAddedMarkupPlugin.h; sourceTree = "<group>"; };
+		4C025636160A1D20002B9FC4 /* XcAddedMarkupPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcAddedMarkupPlugin.m; sourceTree = "<group>"; };
+		4C0D90F0160A32690068141C /* AddedMarkupApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddedMarkupApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C0D90F2160A32690068141C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		4C0D90F5160A32690068141C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4C0D90F6160A32690068141C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4C0D90F7160A32690068141C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C0D90FA160A32690068141C /* AddedMarkupApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AddedMarkupApp-Info.plist"; sourceTree = "<group>"; };
+		4C0D90FC160A32690068141C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C0D90FE160A32690068141C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C0D9100160A32690068141C /* AddedMarkupApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AddedMarkupApp-Prefix.pch"; sourceTree = "<group>"; };
+		4C0D9104160A32690068141C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4C0D9105160A32690068141C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4C0D9108160A32690068141C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4C0D910E160A34710068141C /* AttachEmbeddedImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachEmbeddedImages.m; sourceTree = "<group>"; };
+		4C22B1EE160B16B30071792F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		4C51B0D61608F2C100184490 /* XcAddedMarkup.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcAddedMarkup.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C51B0DD1608F2C100184490 /* XcAddedMarkup-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XcAddedMarkup-Info.plist"; sourceTree = "<group>"; };
+		4C51B0E11608F2C100184490 /* XcAddedMarkup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XcAddedMarkup-Prefix.pch"; sourceTree = "<group>"; };
+		4C6C4A101851BC6F00DF8A67 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		4CBCF3EF1609136200C3E6B9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		4CBCF3F01609136200C3E6B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4CBCF3F71609137E00C3E6B9 /* AttachEmbeddedImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachEmbeddedImages.h; sourceTree = "<group>"; };
+		4CBCF3F81609137E00C3E6B9 /* SimpleBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBase64.h; sourceTree = "<group>"; };
+		4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBase64.m; sourceTree = "<group>"; };
+		4CBCF3FA1609137E00C3E6B9 /* XcodeColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeColors.h; sourceTree = "<group>"; };
+		4CBCF3FB1609137E00C3E6B9 /* XcodeColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeColors.m; sourceTree = "<group>"; };
+		4CECC66F160EF96A0000B419 /* markuptests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = markuptests.h; sourceTree = "<group>"; };
+		4CF76C6F1611D7FB009423B0 /* AddedMarkup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddedMarkup.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C0D90ED160A32690068141C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C0D90F3160A32690068141C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C51B0D31608F2C100184490 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBCF3F41609137400C3E6B9 /* AppKit.framework in Frameworks */,
+				4CBCF3F51609137400C3E6B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C0D90F4160A32690068141C /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C0D90F5160A32690068141C /* AppKit.framework */,
+				4C0D90F6160A32690068141C /* CoreData.framework */,
+				4C0D90F7160A32690068141C /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		4C0D90F8160A32690068141C /* AddedMarkupApp */ = {
+			isa = PBXGroup;
+			children = (
+				4C0D9104160A32690068141C /* AppDelegate.h */,
+				4C0D9105160A32690068141C /* AppDelegate.m */,
+				4C0D9107160A32690068141C /* MainMenu.xib */,
+				4C0D90F9160A32690068141C /* Supporting Files */,
+			);
+			path = AddedMarkupApp;
+			sourceTree = "<group>";
+		};
+		4C0D90F9160A32690068141C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C0D90FA160A32690068141C /* AddedMarkupApp-Info.plist */,
+				4C0D90FB160A32690068141C /* InfoPlist.strings */,
+				4C0D90FE160A32690068141C /* main.m */,
+				4C0D9100160A32690068141C /* AddedMarkupApp-Prefix.pch */,
+				4CECC66F160EF96A0000B419 /* markuptests.h */,
+				4C6C4A101851BC6F00DF8A67 /* LICENSE */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C51B0CB1608F2C100184490 = {
+			isa = PBXGroup;
+			children = (
+				4C51B0DB1608F2C100184490 /* XcAddedMarkup */,
+				4C0D90F8160A32690068141C /* AddedMarkupApp */,
+				4C51B0D81608F2C100184490 /* Frameworks */,
+				4C51B0D71608F2C100184490 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C51B0D71608F2C100184490 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C51B0D61608F2C100184490 /* XcAddedMarkup.xcplugin */,
+				4C0D90F0160A32690068141C /* AddedMarkupApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C51B0D81608F2C100184490 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CBCF3EF1609136200C3E6B9 /* AppKit.framework */,
+				4CBCF3F01609136200C3E6B9 /* Foundation.framework */,
+				4C0D90F2160A32690068141C /* Cocoa.framework */,
+				4C22B1EE160B16B30071792F /* CoreFoundation.framework */,
+				4C0D90F4160A32690068141C /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C51B0DB1608F2C100184490 /* XcAddedMarkup */ = {
+			isa = PBXGroup;
+			children = (
+				4CBCF3F61609137E00C3E6B9 /* Classes */,
+				4C51B0DC1608F2C100184490 /* Supporting Files */,
+			);
+			path = XcAddedMarkup;
+			sourceTree = "<group>";
+		};
+		4C51B0DC1608F2C100184490 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C51B0DD1608F2C100184490 /* XcAddedMarkup-Info.plist */,
+				4C51B0E11608F2C100184490 /* XcAddedMarkup-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CBCF3F61609137E00C3E6B9 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4CF76C6F1611D7FB009423B0 /* AddedMarkup.h */,
+				4CBCF3F71609137E00C3E6B9 /* AttachEmbeddedImages.h */,
+				4C0D910E160A34710068141C /* AttachEmbeddedImages.m */,
+				4CBCF3F81609137E00C3E6B9 /* SimpleBase64.h */,
+				4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */,
+				4CBCF3FA1609137E00C3E6B9 /* XcodeColors.h */,
+				4CBCF3FB1609137E00C3E6B9 /* XcodeColors.m */,
+				4C025635160A1D20002B9FC4 /* XcAddedMarkupPlugin.h */,
+				4C025636160A1D20002B9FC4 /* XcAddedMarkupPlugin.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C0D90EF160A32690068141C /* AddedMarkupApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C0D910C160A32690068141C /* Build configuration list for PBXNativeTarget "AddedMarkupApp" */;
+			buildPhases = (
+				4C0D90EC160A32690068141C /* Sources */,
+				4C0D90ED160A32690068141C /* Frameworks */,
+				4C0D90EE160A32690068141C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AddedMarkupApp;
+			productName = AddedMarkupApp;
+			productReference = 4C0D90F0160A32690068141C /* AddedMarkupApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C51B0D51608F2C100184490 /* XcAddedMarkup */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C51B0E41608F2C100184490 /* Build configuration list for PBXNativeTarget "XcAddedMarkup" */;
+			buildPhases = (
+				4C51B0D21608F2C100184490 /* Sources */,
+				4C51B0D31608F2C100184490 /* Frameworks */,
+				4C51B0D41608F2C100184490 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XcAddedMarkup;
+			productName = XcAddedMarkup;
+			productReference = 4C51B0D61608F2C100184490 /* XcAddedMarkup.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C51B0CD1608F2C100184490 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Michael Krause";
+			};
+			buildConfigurationList = 4C51B0D01608F2C100184490 /* Build configuration list for PBXProject "XcAddedMarkup" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4C51B0CB1608F2C100184490;
+			productRefGroup = 4C51B0D71608F2C100184490 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C51B0D51608F2C100184490 /* XcAddedMarkup */,
+				4C0D90EF160A32690068141C /* AddedMarkupApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C0D90EE160A32690068141C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C0D90FD160A32690068141C /* InfoPlist.strings in Resources */,
+				4C0D9109160A32690068141C /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C51B0D41608F2C100184490 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C0D90EC160A32690068141C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C0D90FF160A32690068141C /* main.m in Sources */,
+				4C22B26C160B3A990071792F /* AppDelegate.m in Sources */,
+				4C0D9110160A34710068141C /* AttachEmbeddedImages.m in Sources */,
+				4C83B7EF160A4B9200E570DE /* SimpleBase64.m in Sources */,
+				4C6C4A111851C3FA00DF8A67 /* XcodeColors.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C51B0D21608F2C100184490 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CBCF3FC1609137E00C3E6B9 /* SimpleBase64.m in Sources */,
+				4CBCF3FD1609137E00C3E6B9 /* XcodeColors.m in Sources */,
+				4C025637160A1D20002B9FC4 /* XcAddedMarkupPlugin.m in Sources */,
+				4C0D910F160A34710068141C /* AttachEmbeddedImages.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4C0D90FB160A32690068141C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C0D90FC160A32690068141C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4C0D9107160A32690068141C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C0D9108160A32690068141C /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C0D910A160A32690068141C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AddedMarkupApp/AddedMarkupApp-Prefix.pch";
+				INFOPLIST_FILE = "AddedMarkupApp/AddedMarkupApp-Info.plist";
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4C0D910B160A32690068141C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AddedMarkupApp/AddedMarkupApp-Prefix.pch";
+				INFOPLIST_FILE = "AddedMarkupApp/AddedMarkupApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4C51B0E21608F2C100184490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4C51B0E31608F2C100184490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4C51B0E51608F2C100184490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XcAddedMarkup/XcAddedMarkup-Prefix.pch";
+				INFOPLIST_FILE = "XcAddedMarkup/XcAddedMarkup-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		4C51B0E61608F2C100184490 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "XcAddedMarkup/XcAddedMarkup-Prefix.pch";
+				INFOPLIST_FILE = "XcAddedMarkup/XcAddedMarkup-Info.plist";
+				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C0D910C160A32690068141C /* Build configuration list for PBXNativeTarget "AddedMarkupApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C0D910A160A32690068141C /* Debug */,
+				4C0D910B160A32690068141C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C51B0D01608F2C100184490 /* Build configuration list for PBXProject "XcAddedMarkup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C51B0E21608F2C100184490 /* Debug */,
+				4C51B0E31608F2C100184490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C51B0E41608F2C100184490 /* Build configuration list for PBXNativeTarget "XcAddedMarkup" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C51B0E51608F2C100184490 /* Debug */,
+				4C51B0E61608F2C100184490 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C51B0CD1608F2C100184490 /* Project object */;
+}
