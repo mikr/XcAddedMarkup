@@ -6,15 +6,15 @@ First a screenshot of some markup with the last character still missing followed
 A third screenshot shows the Xcode console where I have found this plugin to be most useful for logging images into the console.
 
 <p align="center" >
-  <img src="images/sourcecode1.png" alt="AFNetworking" title="AFNetworking">
+  <img src="images/sourcecode1.png" alt="Source Code" title="Source Code">
 </p>
 
 <p align="center" >
-  <img src="images/sourcecode2.png" alt="AFNetworking" title="AFNetworking">
+  <img src="images/sourcecode2.png" alt="Interpreted Markup" title="Interpreted Markup">
 </p>
 
 <p align="center" >
-  <img src="images/console.png" alt="AFNetworking" title="AFNetworking">
+  <img src="images/console.png" alt="Xcode Console" title="Xcode Console">
 </p>
 
 Images begin with ∂i and end with ƒi.
