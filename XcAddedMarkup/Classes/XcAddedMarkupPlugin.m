@@ -20,10 +20,24 @@
 #define USERDEFAULTS_REFRESH_TIME 5.0
 
 static IMP IMP_NSTextStorage_fixAttributesInRange = nil;
+static IMP IMP_NSWorkspace_openURL = nil;
+
 NSTimeInterval lastUserDefaultsSync = 0.0;
 
 
 @implementation XcodeColors_NSTextStorage
+
+- (BOOL)openURL:(NSURL *)url
+{
+    if (url && ! url.scheme) {
+        NSString *path = [[url absoluteString] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSURL *theURL = [NSURL fileURLWithPath:path isDirectory:NO];
+        if ([theURL checkResourceIsReachableAndReturnError:nil]) {
+            return [[NSWorkspace sharedWorkspace] openFile:path withApplication:@"Xcode"];
+        }
+    }
+    return IMP_NSWorkspace_openURL(self, _cmd, url);
+}
 
 - (void)fixAttributesInRange:(NSRange)aRange
 {
@@ -123,6 +137,9 @@ static XcAddedMarkupPlugin *sharedPlugin = nil;
 	
     IMP_NSTextStorage_fixAttributesInRange = ReplaceInstanceMethod([NSTextStorage class], @selector(fixAttributesInRange:),
                                                                    [XcodeColors_NSTextStorage class], @selector(fixAttributesInRange:));
+	
+    IMP_NSWorkspace_openURL = ReplaceInstanceMethod([NSWorkspace class], @selector(openURL:),
+                                                                   [XcodeColors_NSTextStorage class], @selector(openURL:));
 	
 	setenv(XCODE_COLORS, "YES", 0);
 }
