@@ -55,7 +55,16 @@ defaults write com.apple.dt.Xcode XcAddedMarkupFixDisabled -bool yes
 defaults write com.apple.dt.Xcode XcAddedMarkupImagesDisabled -bool yes
 defaults write com.apple.dt.Xcode XcAddedMarkupLinksDisabled -bool yes
 defaults write com.apple.dt.Xcode XcAddedMarkupAnsiColorsDisabled -bool yes
+defaults write com.apple.dt.Xcode XcAddedMarkupEmbeddedControlsDisabled -bool yes
 ```
+## RestartLessOften
+
+In addition to links and image XcAddedMarkup also support [RestartLessOften](https://github.com/mikr/RestartLessOften) in that certain macro calls are recognized in the source code and a slider and text field are offered to tweak a parameter during application runtime.
+
+<p align="center" >
+  <img src="images/rloslider.png" alt="RestartLessOften" title="RestartLessOften">
+</p>
+
 
 ## Requirements
 
