@@ -8,15 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4C025637160A1D20002B9FC4 /* XcAddedMarkupPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C025636160A1D20002B9FC4 /* XcAddedMarkupPlugin.m */; };
+		4C0B5CDB185911ED006FFA0D /* XcAMFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A31051858E3B1004AB18D /* XcAMFrameView.m */; };
+		4C0B5CDC185911ED006FFA0D /* XcEmbeddedControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A31071858E3B1004AB18D /* XcEmbeddedControls.m */; };
+		4C0B5CDE185911FE006FFA0D /* XcAMPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30F61858C44F004AB18D /* XcAMPopoverViewController.m */; };
 		4C0D90F3160A32690068141C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C0D90F2160A32690068141C /* Cocoa.framework */; };
 		4C0D90FD160A32690068141C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C0D90FB160A32690068141C /* InfoPlist.strings */; };
 		4C0D90FF160A32690068141C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D90FE160A32690068141C /* main.m */; };
 		4C0D9109160A32690068141C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C0D9107160A32690068141C /* MainMenu.xib */; };
-		4C0D910F160A34710068141C /* AttachEmbeddedImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D910E160A34710068141C /* AttachEmbeddedImages.m */; };
+		4C0D910F160A34710068141C /* AttachEmbeddedImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D910E160A34710068141C /* AttachEmbeddedImages.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4C0D9110160A34710068141C /* AttachEmbeddedImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D910E160A34710068141C /* AttachEmbeddedImages.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4C22B26C160B3A990071792F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D9105160A32690068141C /* AppDelegate.m */; };
 		4C6C4A111851C3FA00DF8A67 /* XcodeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3FB1609137E00C3E6B9 /* XcodeColors.m */; };
 		4C83B7EF160A4B9200E570DE /* SimpleBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */; };
+		4C8A30FD1858C44F004AB18D /* XcAMPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30F61858C44F004AB18D /* XcAMPopoverViewController.m */; };
+		4C8A31031858C54C004AB18D /* DVTSourceTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A31021858C54C004AB18D /* DVTSourceTextView.m */; };
+		4C8A310A1858E3B1004AB18D /* XcAMFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A31051858E3B1004AB18D /* XcAMFrameView.m */; };
+		4C8A310B1858E3B1004AB18D /* XcEmbeddedControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A31071858E3B1004AB18D /* XcEmbeddedControls.m */; };
 		4CBCF3F41609137400C3E6B9 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBCF3EF1609136200C3E6B9 /* AppKit.framework */; };
 		4CBCF3F51609137400C3E6B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBCF3F01609136200C3E6B9 /* Foundation.framework */; };
 		4CBCF3FC1609137E00C3E6B9 /* SimpleBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */; };
@@ -40,10 +47,19 @@
 		4C0D9108160A32690068141C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4C0D910E160A34710068141C /* AttachEmbeddedImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttachEmbeddedImages.m; sourceTree = "<group>"; };
 		4C22B1EE160B16B30071792F /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		4C2E2EB2185A264100F136F7 /* XcAMTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XcAMTypes.h; sourceTree = "<group>"; };
 		4C51B0D61608F2C100184490 /* XcAddedMarkup.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XcAddedMarkup.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C51B0DD1608F2C100184490 /* XcAddedMarkup-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XcAddedMarkup-Info.plist"; sourceTree = "<group>"; };
 		4C51B0E11608F2C100184490 /* XcAddedMarkup-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XcAddedMarkup-Prefix.pch"; sourceTree = "<group>"; };
 		4C6C4A101851BC6F00DF8A67 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		4C8A30F51858C44F004AB18D /* XcAMPopoverViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcAMPopoverViewController.h; sourceTree = "<group>"; };
+		4C8A30F61858C44F004AB18D /* XcAMPopoverViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcAMPopoverViewController.m; sourceTree = "<group>"; };
+		4C8A31011858C54C004AB18D /* DVTSourceTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DVTSourceTextView.h; sourceTree = "<group>"; };
+		4C8A31021858C54C004AB18D /* DVTSourceTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DVTSourceTextView.m; sourceTree = "<group>"; };
+		4C8A31041858E3B1004AB18D /* XcAMFrameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcAMFrameView.h; sourceTree = "<group>"; };
+		4C8A31051858E3B1004AB18D /* XcAMFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcAMFrameView.m; sourceTree = "<group>"; };
+		4C8A31061858E3B1004AB18D /* XcEmbeddedControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcEmbeddedControls.h; sourceTree = "<group>"; };
+		4C8A31071858E3B1004AB18D /* XcEmbeddedControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcEmbeddedControls.m; sourceTree = "<group>"; };
 		4CBCF3EF1609136200C3E6B9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		4CBCF3F01609136200C3E6B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CBCF3F71609137E00C3E6B9 /* AttachEmbeddedImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachEmbeddedImages.h; sourceTree = "<group>"; };
@@ -91,6 +107,8 @@
 			children = (
 				4C0D9104160A32690068141C /* AppDelegate.h */,
 				4C0D9105160A32690068141C /* AppDelegate.m */,
+				4C8A31011858C54C004AB18D /* DVTSourceTextView.h */,
+				4C8A31021858C54C004AB18D /* DVTSourceTextView.m */,
 				4C0D9107160A32690068141C /* MainMenu.xib */,
 				4C0D90F9160A32690068141C /* Supporting Files */,
 			);
@@ -171,6 +189,13 @@
 				4CBCF3FB1609137E00C3E6B9 /* XcodeColors.m */,
 				4C025635160A1D20002B9FC4 /* XcAddedMarkupPlugin.h */,
 				4C025636160A1D20002B9FC4 /* XcAddedMarkupPlugin.m */,
+				4C8A31041858E3B1004AB18D /* XcAMFrameView.h */,
+				4C8A31051858E3B1004AB18D /* XcAMFrameView.m */,
+				4C8A30F51858C44F004AB18D /* XcAMPopoverViewController.h */,
+				4C8A30F61858C44F004AB18D /* XcAMPopoverViewController.m */,
+				4C8A31061858E3B1004AB18D /* XcEmbeddedControls.h */,
+				4C8A31071858E3B1004AB18D /* XcEmbeddedControls.m */,
+				4C2E2EB2185A264100F136F7 /* XcAMTypes.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -264,10 +289,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C0D90FF160A32690068141C /* main.m in Sources */,
+				4C8A310B1858E3B1004AB18D /* XcEmbeddedControls.m in Sources */,
+				4C8A31031858C54C004AB18D /* DVTSourceTextView.m in Sources */,
 				4C22B26C160B3A990071792F /* AppDelegate.m in Sources */,
+				4C8A310A1858E3B1004AB18D /* XcAMFrameView.m in Sources */,
 				4C0D9110160A34710068141C /* AttachEmbeddedImages.m in Sources */,
 				4C83B7EF160A4B9200E570DE /* SimpleBase64.m in Sources */,
 				4C6C4A111851C3FA00DF8A67 /* XcodeColors.m in Sources */,
+				4C8A30FD1858C44F004AB18D /* XcAMPopoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +305,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CBCF3FC1609137E00C3E6B9 /* SimpleBase64.m in Sources */,
+				4C0B5CDC185911ED006FFA0D /* XcEmbeddedControls.m in Sources */,
+				4C0B5CDB185911ED006FFA0D /* XcAMFrameView.m in Sources */,
 				4CBCF3FD1609137E00C3E6B9 /* XcodeColors.m in Sources */,
+				4C0B5CDE185911FE006FFA0D /* XcAMPopoverViewController.m in Sources */,
 				4C025637160A1D20002B9FC4 /* XcAddedMarkupPlugin.m in Sources */,
 				4C0D910F160A34710068141C /* AttachEmbeddedImages.m in Sources */,
 			);
@@ -387,10 +419,11 @@
 		4C51B0E51608F2C100184490 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XcAddedMarkup/XcAddedMarkup-Prefix.pch";
 				INFOPLIST_FILE = "XcAddedMarkup/XcAddedMarkup-Info.plist";
@@ -403,10 +436,11 @@
 		4C51B0E61608F2C100184490 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
-				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XcAddedMarkup/XcAddedMarkup-Prefix.pch";
 				INFOPLIST_FILE = "XcAddedMarkup/XcAddedMarkup-Info.plist";

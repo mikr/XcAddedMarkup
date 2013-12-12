@@ -46,6 +46,9 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    xec = [[XcEmbeddedControls alloc] init];
+    [xec applicationDidFinishLaunching:nil];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(editedEnded:) name:NSTextStorageDidProcessEditingNotification object:nil];
     [self.window setLevel: NSStatusWindowLevel];
     marker = [[AddedRangeMarker alloc] init];
@@ -68,6 +71,9 @@
     NSString *link1 = AMLinkWithTitle(@"http://apple.com", @"Apple");
     NSString *fn = filename1;
     NSString *text = [NSString stringWithFormat:@"∂i!!%@ƒi \n %@ %@ %@\n", fn, DebugDecorateGREEN(@"Apple"), link1, DebugDecorateBLUE(@"Apple")];
+    text = [text stringByAppendingString:@"\n\n\n// RLOGetInt(@\"num_triangles\", 36);\n"];
+    text = [text stringByAppendingString:@"// RLOGetFloat(@\"num_triangles\", 36);\n"];
+    
     NSString *text2 = [NSString stringWithFormat:@"Test zooming image: %@", imagestring1];
     NSLog(@"%@", text);
     NSLog(@"%@", text2);

@@ -7,6 +7,7 @@
 
 #import "XcAddedMarkupPlugin.h"
 #import "XcodeColors.h"
+#import "XcEmbeddedControls.h"
 
 #define XCODE_COLORS "XcodeColors"
 
@@ -89,12 +90,14 @@ NSTimeInterval lastUserDefaultsSync = 0.0;
 @synthesize marker;
 
 static XcAddedMarkupPlugin *sharedPlugin = nil;
+static XcEmbeddedControls *embeddedControls = nil;
 
 + (void)pluginDidLoad:(NSBundle *)plugin
 {
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		sharedPlugin = [[self alloc] init];
+		embeddedControls = [[XcEmbeddedControls alloc] init];
 	});
 }
 

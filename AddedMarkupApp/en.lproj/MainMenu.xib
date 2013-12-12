@@ -1316,7 +1316,7 @@
 			<object class="NSWindowTemplate" id="972006081">
 				<int key="NSWindowStyleMask">15</int>
 				<int key="NSWindowBacking">2</int>
-				<string key="NSWindowRect">{{335, 390}, {332, 244}}</string>
+				<string key="NSWindowRect">{{335, 390}, {481, 247}}</string>
 				<int key="NSWTFlags">1954021376</int>
 				<string key="NSWindowTitle">AddedMarkupApp</string>
 				<string key="NSWindowClass">NSWindow</string>
@@ -1356,10 +1356,10 @@
 												<string>WebURLsWithTitlesPboardType</string>
 												<string>public.url</string>
 											</set>
-											<string key="NSFrameSize">{317, 244}</string>
+											<string key="NSFrameSize">{466, 247}</string>
 											<reference key="NSSuperview" ref="946273952"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="299290803"/>
+											<reference key="NSNextKeyView" ref="882129772"/>
 											<string key="NSReuseIdentifierKey">_NS:13</string>
 											<object class="NSTextContainer" key="NSTextContainer" id="1002542893">
 												<object class="NSLayoutManager" key="NSLayoutManager">
@@ -1376,7 +1376,7 @@
 													<nil key="NSDelegate"/>
 												</object>
 												<reference key="NSTextView" ref="368191034"/>
-												<double key="NSWidth">317</double>
+												<double key="NSWidth">466</double>
 												<int key="NSTCFlags">1</int>
 											</object>
 											<object class="NSTextViewSharedData" key="NSSharedData">
@@ -1428,7 +1428,7 @@
 											<nil key="NSDelegate"/>
 										</object>
 									</array>
-									<string key="NSFrame">{{1, 1}, {317, 244}}</string>
+									<string key="NSFrame">{{1, 1}, {466, 247}}</string>
 									<reference key="NSSuperview" ref="609783253"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="368191034"/>
@@ -1648,7 +1648,7 @@ wGw</bytes>
 								<object class="NSScroller" id="882129772">
 									<reference key="NSNextResponder" ref="609783253"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{318, 1}, {15, 244}}</string>
+									<string key="NSFrame">{{467, 1}, {15, 247}}</string>
 									<reference key="NSSuperview" ref="609783253"/>
 									<reference key="NSWindow"/>
 									<string key="NSReuseIdentifierKey">_NS:83</string>
@@ -1674,10 +1674,10 @@ wGw</bytes>
 									<double key="NSPercent">0.94565218687057495</double>
 								</object>
 							</array>
-							<string key="NSFrame">{{-1, -1}, {334, 246}}</string>
+							<string key="NSFrame">{{-1, -1}, {483, 249}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="946273952"/>
+							<reference key="NSNextKeyView" ref="299290803"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">133138</int>
 							<reference key="NSVScroller" ref="882129772"/>
@@ -1688,7 +1688,7 @@ wGw</bytes>
 							<double key="NSMagnification">1</double>
 						</object>
 					</array>
-					<string key="NSFrameSize">{332, 244}</string>
+					<string key="NSFrameSize">{481, 247}</string>
 					<reference key="NSSuperview"/>
 					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="609783253"/>
@@ -3660,6 +3660,7 @@ wGw</bytes>
 				<string key="534.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<boolean value="NO" key="551.IBNSViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="551.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="552.CustomClassName">DVTSourceTextView</string>
 				<string key="552.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="553.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="554.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3710,6 +3711,14 @@ wGw</bytes>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/AppDelegate.h</string>
+					</object>
+				</object>
+				<object class="IBPartialClassDescription">
+					<string key="className">DVTSourceTextView</string>
+					<string key="superclassName">NSTextView</string>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/DVTSourceTextView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

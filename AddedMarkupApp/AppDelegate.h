@@ -7,9 +7,12 @@
 
 #import <Cocoa/Cocoa.h>
 #import "AttachEmbeddedImages.h"
+#import "XcEmbeddedControls.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate> {
     AddedRangeMarker *marker;
+    
+    XcEmbeddedControls *xec;
 }
 
 @property (assign) IBOutlet NSWindow *window;
