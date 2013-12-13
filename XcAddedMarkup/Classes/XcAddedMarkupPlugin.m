@@ -20,7 +20,7 @@
 
 #define USERDEFAULTS_REFRESH_TIME 5.0
 
-static IMP IMP_XcAM_NSTextStorage_fixAttributesInRange = nil;
+static void (*IMP_XcAM_NSTextStorage_fixAttributesInRange)(id, SEL, NSRange)  = nil;
 static IMP IMP_NSWorkspace_openURL = nil;
 static BOOL XcodeColorsPluginPresent;
 
@@ -47,7 +47,8 @@ static NSTimeInterval lastUserDefaultsSync = 0.0;
 	
 	// First we invoke the actual NSTextStorage method.
 	// This allows it to do any normal processing.
-    
+    // It may also be the already swizzled method from the XcodeColors plugin
+
 	IMP_XcAM_NSTextStorage_fixAttributesInRange(self, _cmd, aRange);
     
     // Parts of this plugin can be enabled or disabled using shell commands like:
@@ -65,25 +66,20 @@ static NSTimeInterval lastUserDefaultsSync = 0.0;
     }
     
     // Then we scan for our special escape sequences, and apply desired color attributes and other markup.
-	
-	char *xcode_colors = getenv(XCODE_COLORS);
-	if (xcode_colors && (strcmp(xcode_colors, "YES") == 0))
-	{
-        if (! [[NSUserDefaults standardUserDefaults] boolForKey:kXcAddedMarkupImagesDisabled]) {
-            [[XcAddedMarkupPlugin globalMarker] attachEmbeddedImages:self textStorageRange:aRange];
+    if (! [[NSUserDefaults standardUserDefaults] boolForKey:kXcAddedMarkupImagesDisabled]) {
+        [[XcAddedMarkupPlugin globalMarker] attachEmbeddedImages:self textStorageRange:aRange];
+    }
+    
+    if (! [[NSUserDefaults standardUserDefaults] boolForKey:kXcAddedMarkupLinksDisabled]) {
+        [[XcAddedMarkupPlugin globalMarker] attachEmbeddedLinks:self textStorageRange:aRange];
+    }
+    
+    if (! [[NSUserDefaults standardUserDefaults] boolForKey:kXcAddedMarkupAnsiColorsDisabled]) {
+        // If the XcodeColors plugin is present, we don't do the ANSI coloring ourself.
+        if (! XcodeColorsPluginPresent) {
+            XcAM_ApplyANSIColors(self, aRange, XCODE_COLORS_ESCAPE);
         }
-        
-        if (! [[NSUserDefaults standardUserDefaults] boolForKey:kXcAddedMarkupLinksDisabled]) {
-            [[XcAddedMarkupPlugin globalMarker] attachEmbeddedLinks:self textStorageRange:aRange];
-        }
-        
-        if (! [[NSUserDefaults standardUserDefaults] boolForKey:kXcAddedMarkupAnsiColorsDisabled]) {
-            // If the XcodeColors plugin is present, we don't do the ANSI coloring ourself.
-            if (! XcodeColorsPluginPresent) {
-                XcAM_ApplyANSIColors(self, aRange, XCODE_COLORS_ESCAPE);
-            }
-        }
-	}
+    }
 }
 
 @end
@@ -146,12 +142,8 @@ static XcEmbeddedControls *embeddedControls = nil;
     if (NSClassFromString(@"XcodeColors_NSTextStorage")) {
         XcodeColorsPluginPresent = YES;
     }
-    if (! XcodeColorsPluginPresent) {
-        IMP_XcAM_NSTextStorage_fixAttributesInRange = XcAM_ReplaceInstanceMethod([NSTextStorage class], @selector(fixAttributesInRange:),
-                                                                                 [XcAM_XcodeColors_NSTextStorage class], @selector(fixAttributesInRange:));
-    } else {
-        NSLog(@"Warning: XcAddedMarkup cannot support links and images because the XcodeColors plugin is present.");
-    }
+    IMP_XcAM_NSTextStorage_fixAttributesInRange = XcAM_ReplaceInstanceMethod([NSTextStorage class], @selector(fixAttributesInRange:),
+                                                                             [XcAM_XcodeColors_NSTextStorage class], @selector(fixAttributesInRange:));
     IMP_NSWorkspace_openURL = XcAM_ReplaceInstanceMethod([NSWorkspace class], @selector(openURL:),
                                                                    [XcAM_XcodeColors_NSTextStorage class], @selector(openURL:));
 	setenv(XCODE_COLORS, "YES", 0);
