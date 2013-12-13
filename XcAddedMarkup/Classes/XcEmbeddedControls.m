@@ -293,6 +293,10 @@
 {
 	__block NSString *keypath = nil;
     __block NSRange econtrolRange = NSMakeRange(NSNotFound, 0);
+    
+    if (! text) {
+        return econtrolRange;
+    }
 
     [_rloGetIntRegex enumerateMatchesInString:text options:0 range:NSMakeRange(0, text.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
         NSRange range = [result range];
