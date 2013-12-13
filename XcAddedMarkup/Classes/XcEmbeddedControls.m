@@ -292,17 +292,18 @@
 - (NSRange)rloGetIntText:(NSString *)text selectedRange:(NSRange)selectedRange keypathRange:(NSRangePointer)keypathRange
 {
 	__block NSString *keypath = nil;
-    
-    NSTextCheckingResult *result = [_rloGetIntRegex firstMatchInString:text options:0 range:NSMakeRange(0, text.length)];
-    NSRange econtrolRange = NSMakeRange(NSNotFound, 0);
-    if (result) {
-        econtrolRange = [result range];
-        if (selectedRange.location >= econtrolRange.location && NSMaxRange(selectedRange) <= NSMaxRange(econtrolRange)) {
-            NSRange range = [result rangeAtIndex:2];
-            if (range.length > 0) {
-                keypath = [text substringWithRange:range];
+    __block NSRange econtrolRange = NSMakeRange(NSNotFound, 0);
+
+    [_rloGetIntRegex enumerateMatchesInString:text options:0 range:NSMakeRange(0, text.length) usingBlock:^(NSTextCheckingResult *result, NSMatchingFlags flags, BOOL *stop) {
+        NSRange range = [result range];
+        if (selectedRange.location >= range.location && NSMaxRange(selectedRange) <= NSMaxRange(range)) {
+            NSRange kprange = [result rangeAtIndex:2];
+            if (kprange.length > 0) {
+                *stop = YES;
+                keypath = [text substringWithRange:kprange];
+                econtrolRange = [result range];
                 if (keypathRange) {
-                    *keypathRange = range;
+                    *keypathRange = kprange;
                 }
                 NSString *typestring = [text substringWithRange:[result rangeAtIndex:1]];
                 if ([typestring isEqualToString:@"Bool"]) {
@@ -316,7 +317,8 @@
                 }
             }
         }
-    }
+    }];
+
 	return econtrolRange;
 }
 
