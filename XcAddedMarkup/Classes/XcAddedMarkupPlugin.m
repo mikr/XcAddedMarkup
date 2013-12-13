@@ -6,7 +6,7 @@
 //
 
 #import "XcAddedMarkupPlugin.h"
-#import "XcodeColors.h"
+#import "XcAM_XcodeColors.h"
 #import "XcEmbeddedControls.h"
 
 #define XCODE_COLORS "XcodeColors"
@@ -20,13 +20,14 @@
 
 #define USERDEFAULTS_REFRESH_TIME 5.0
 
-static IMP IMP_NSTextStorage_fixAttributesInRange = nil;
+static IMP IMP_XcAM_NSTextStorage_fixAttributesInRange = nil;
 static IMP IMP_NSWorkspace_openURL = nil;
+static BOOL XcodeColorsPluginPresent;
 
-NSTimeInterval lastUserDefaultsSync = 0.0;
+static NSTimeInterval lastUserDefaultsSync = 0.0;
 
 
-@implementation XcodeColors_NSTextStorage
+@implementation XcAM_XcodeColors_NSTextStorage
 
 - (BOOL)openURL:(NSURL *)url
 {
@@ -46,9 +47,9 @@ NSTimeInterval lastUserDefaultsSync = 0.0;
 	
 	// First we invoke the actual NSTextStorage method.
 	// This allows it to do any normal processing.
-	
-	IMP_NSTextStorage_fixAttributesInRange(self, _cmd, aRange);
-
+    
+	IMP_XcAM_NSTextStorage_fixAttributesInRange(self, _cmd, aRange);
+    
     // Parts of this plugin can be enabled or disabled using shell commands like:
     // $ defaults write com.apple.dt.Xcode XcAddedMarkupAnsiColorsDisabled -bool no
     // To take changes into effect, we synchronize every few seconds if needed.
@@ -77,7 +78,10 @@ NSTimeInterval lastUserDefaultsSync = 0.0;
         }
         
         if (! [[NSUserDefaults standardUserDefaults] boolForKey:kXcAddedMarkupAnsiColorsDisabled]) {
-            ApplyANSIColors(self, aRange, XCODE_COLORS_ESCAPE);
+            // If the XcodeColors plugin is present, we don't do the ANSI coloring ourself.
+            if (! XcodeColorsPluginPresent) {
+                XcAM_ApplyANSIColors(self, aRange, XCODE_COLORS_ESCAPE);
+            }
         }
 	}
 }
@@ -137,13 +141,19 @@ static XcEmbeddedControls *embeddedControls = nil;
 	char *xcode_colors = getenv(XCODE_COLORS);
 	if (xcode_colors && (strcmp(xcode_colors, "YES") != 0))
 		return;
-	
-    IMP_NSTextStorage_fixAttributesInRange = ReplaceInstanceMethod([NSTextStorage class], @selector(fixAttributesInRange:),
-                                                                   [XcodeColors_NSTextStorage class], @selector(fixAttributesInRange:));
-	
-    IMP_NSWorkspace_openURL = ReplaceInstanceMethod([NSWorkspace class], @selector(openURL:),
-                                                                   [XcodeColors_NSTextStorage class], @selector(openURL:));
-	
+    
+	// The the XcodeColors plugin is also present, we will swizzle to its XcodeColors_NSTextStorage class
+    if (NSClassFromString(@"XcodeColors_NSTextStorage")) {
+        XcodeColorsPluginPresent = YES;
+    }
+    if (! XcodeColorsPluginPresent) {
+        IMP_XcAM_NSTextStorage_fixAttributesInRange = XcAM_ReplaceInstanceMethod([NSTextStorage class], @selector(fixAttributesInRange:),
+                                                                                 [XcAM_XcodeColors_NSTextStorage class], @selector(fixAttributesInRange:));
+    } else {
+        NSLog(@"Warning: XcAddedMarkup cannot support links and images because the XcodeColors plugin is present.");
+    }
+    IMP_NSWorkspace_openURL = XcAM_ReplaceInstanceMethod([NSWorkspace class], @selector(openURL:),
+                                                                   [XcAM_XcodeColors_NSTextStorage class], @selector(openURL:));
 	setenv(XCODE_COLORS, "YES", 0);
 }
 

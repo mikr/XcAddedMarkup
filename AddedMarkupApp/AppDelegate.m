@@ -8,7 +8,7 @@
 #import "AppDelegate.h"
 #import "SimpleBase64.h"
 #import "AttachEmbeddedImages.h"
-#import "XcodeColors.h"
+#import "XcAM_XcodeColors.h"
 
 
 #define COLSEQ_RED @"fg255,0,0;"
@@ -126,7 +126,7 @@
 {
     NSTextStorage *textStorage = [aNotification object];
 	NSRange range = [textStorage editedRange];
-    ApplyANSIColors(textStorage, range, XCODE_COLORS_ESCAPE);
+    XcAM_ApplyANSIColors(textStorage, range, XCODE_COLORS_ESCAPE);
     [marker attachEmbeddedImages:textStorage textStorageRange:range];
     [marker attachEmbeddedLinks:textStorage textStorageRange:range];
 }

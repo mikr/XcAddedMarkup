@@ -39,16 +39,16 @@
 
 
 
-@interface XcodeColors_NSTextStorage : NSTextStorage
+@interface XcAM_XcodeColors_NSTextStorage : NSTextStorage
 
 @end
 
-void ApplyANSIColors(NSTextStorage *textStorage, NSRange textStorageRange, NSString *escapeSeq);
+void XcAM_ApplyANSIColors(NSTextStorage *textStorage, NSRange textStorageRange, NSString *escapeSeq);
 
 
-@interface XcodeColors : NSObject
+@interface XcAM_XcodeColors : NSObject
 
-IMP ReplaceInstanceMethod(Class sourceClass, SEL sourceSel, Class destinationClass, SEL destinationSel);
+IMP XcAM_ReplaceInstanceMethod(Class sourceClass, SEL sourceSel, Class destinationClass, SEL destinationSel);
 
 @end
 

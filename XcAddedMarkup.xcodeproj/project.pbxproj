@@ -18,7 +18,7 @@
 		4C0D910F160A34710068141C /* AttachEmbeddedImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D910E160A34710068141C /* AttachEmbeddedImages.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4C0D9110160A34710068141C /* AttachEmbeddedImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D910E160A34710068141C /* AttachEmbeddedImages.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4C22B26C160B3A990071792F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D9105160A32690068141C /* AppDelegate.m */; };
-		4C6C4A111851C3FA00DF8A67 /* XcodeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3FB1609137E00C3E6B9 /* XcodeColors.m */; };
+		4C6C4A111851C3FA00DF8A67 /* XcAM_XcodeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3FB1609137E00C3E6B9 /* XcAM_XcodeColors.m */; };
 		4C83B7EF160A4B9200E570DE /* SimpleBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */; };
 		4C8A30FD1858C44F004AB18D /* XcAMPopoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A30F61858C44F004AB18D /* XcAMPopoverViewController.m */; };
 		4C8A31031858C54C004AB18D /* DVTSourceTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A31021858C54C004AB18D /* DVTSourceTextView.m */; };
@@ -27,7 +27,7 @@
 		4CBCF3F41609137400C3E6B9 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBCF3EF1609136200C3E6B9 /* AppKit.framework */; };
 		4CBCF3F51609137400C3E6B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBCF3F01609136200C3E6B9 /* Foundation.framework */; };
 		4CBCF3FC1609137E00C3E6B9 /* SimpleBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */; };
-		4CBCF3FD1609137E00C3E6B9 /* XcodeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3FB1609137E00C3E6B9 /* XcodeColors.m */; };
+		4CBCF3FD1609137E00C3E6B9 /* XcAM_XcodeColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3FB1609137E00C3E6B9 /* XcAM_XcodeColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,8 +65,8 @@
 		4CBCF3F71609137E00C3E6B9 /* AttachEmbeddedImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachEmbeddedImages.h; sourceTree = "<group>"; };
 		4CBCF3F81609137E00C3E6B9 /* SimpleBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleBase64.h; sourceTree = "<group>"; };
 		4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleBase64.m; sourceTree = "<group>"; };
-		4CBCF3FA1609137E00C3E6B9 /* XcodeColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeColors.h; sourceTree = "<group>"; };
-		4CBCF3FB1609137E00C3E6B9 /* XcodeColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcodeColors.m; sourceTree = "<group>"; };
+		4CBCF3FA1609137E00C3E6B9 /* XcAM_XcodeColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcAM_XcodeColors.h; sourceTree = "<group>"; };
+		4CBCF3FB1609137E00C3E6B9 /* XcAM_XcodeColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcAM_XcodeColors.m; sourceTree = "<group>"; };
 		4CECC66F160EF96A0000B419 /* markuptests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = markuptests.h; sourceTree = "<group>"; };
 		4CF76C6F1611D7FB009423B0 /* AddedMarkup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddedMarkup.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,8 +185,8 @@
 				4C0D910E160A34710068141C /* AttachEmbeddedImages.m */,
 				4CBCF3F81609137E00C3E6B9 /* SimpleBase64.h */,
 				4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */,
-				4CBCF3FA1609137E00C3E6B9 /* XcodeColors.h */,
-				4CBCF3FB1609137E00C3E6B9 /* XcodeColors.m */,
+				4CBCF3FA1609137E00C3E6B9 /* XcAM_XcodeColors.h */,
+				4CBCF3FB1609137E00C3E6B9 /* XcAM_XcodeColors.m */,
 				4C025635160A1D20002B9FC4 /* XcAddedMarkupPlugin.h */,
 				4C025636160A1D20002B9FC4 /* XcAddedMarkupPlugin.m */,
 				4C8A31041858E3B1004AB18D /* XcAMFrameView.h */,
@@ -295,7 +295,7 @@
 				4C8A310A1858E3B1004AB18D /* XcAMFrameView.m in Sources */,
 				4C0D9110160A34710068141C /* AttachEmbeddedImages.m in Sources */,
 				4C83B7EF160A4B9200E570DE /* SimpleBase64.m in Sources */,
-				4C6C4A111851C3FA00DF8A67 /* XcodeColors.m in Sources */,
+				4C6C4A111851C3FA00DF8A67 /* XcAM_XcodeColors.m in Sources */,
 				4C8A30FD1858C44F004AB18D /* XcAMPopoverViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,7 +307,7 @@
 				4CBCF3FC1609137E00C3E6B9 /* SimpleBase64.m in Sources */,
 				4C0B5CDC185911ED006FFA0D /* XcEmbeddedControls.m in Sources */,
 				4C0B5CDB185911ED006FFA0D /* XcAMFrameView.m in Sources */,
-				4CBCF3FD1609137E00C3E6B9 /* XcodeColors.m in Sources */,
+				4CBCF3FD1609137E00C3E6B9 /* XcAM_XcodeColors.m in Sources */,
 				4C0B5CDE185911FE006FFA0D /* XcAMPopoverViewController.m in Sources */,
 				4C025637160A1D20002B9FC4 /* XcAddedMarkupPlugin.m in Sources */,
 				4C0D910F160A34710068141C /* AttachEmbeddedImages.m in Sources */,

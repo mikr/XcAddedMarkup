@@ -6,13 +6,13 @@
 //  Copyright 2010 Deep IT. All rights reserved.
 //
 
-#import "XcodeColors.h"
+#import "XcAM_XcodeColors.h"
 #import "SimpleBase64.h"
 #import <objc/runtime.h>
 
 
 
-void ApplyANSIColors(NSTextStorage *textStorage, NSRange textStorageRange, NSString *escapeSeq)
+void XcAM_ApplyANSIColors(NSTextStorage *textStorage, NSRange textStorageRange, NSString *escapeSeq)
 {
 	NSRange range = [[textStorage string] rangeOfString:escapeSeq options:0 range:textStorageRange];
 	if (range.location == NSNotFound)
@@ -245,13 +245,13 @@ void ApplyANSIColors(NSTextStorage *textStorage, NSRange textStorageRange, NSStr
 #pragma mark -
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-@implementation XcodeColors
+@implementation XcAM_XcodeColors
 
-IMP ReplaceInstanceMethod(Class sourceClass, SEL sourceSel, Class destinationClass, SEL destinationSel)
+IMP XcAM_ReplaceInstanceMethod(Class sourceClass, SEL sourceSel, Class destinationClass, SEL destinationSel)
 {
 	if (!sourceSel || !sourceClass || !destinationClass)
 	{
-		NSLog(@"XcodeColors: Missing parameter to ReplaceInstanceMethod");
+		NSLog(@"XcAM_XcodeColors: Missing parameter to XcAM_ReplaceInstanceMethod");
 		return nil;
 	}
 	
@@ -261,7 +261,7 @@ IMP ReplaceInstanceMethod(Class sourceClass, SEL sourceSel, Class destinationCla
 	Method sourceMethod = class_getInstanceMethod(sourceClass, sourceSel);
 	if (!sourceMethod)
 	{
-		NSLog(@"XcodeColors: Unable to get sourceMethod");
+		NSLog(@"XcAM_XcodeColors: Unable to get sourceMethod");
 		return nil;
 	}
 	
@@ -270,14 +270,14 @@ IMP ReplaceInstanceMethod(Class sourceClass, SEL sourceSel, Class destinationCla
 	Method destinationMethod = class_getInstanceMethod(destinationClass, destinationSel);
 	if (!destinationMethod)
 	{
-		NSLog(@"XcodeColors: Unable to get destinationMethod");
+		NSLog(@"XcAM_XcodeColors: Unable to get destinationMethod");
 		return nil;
 	}
 	
 	IMP newImplementation = method_getImplementation(destinationMethod);
 	if (!newImplementation)
 	{
-		NSLog(@"XcodeColors: Unable to get newImplementation");
+		NSLog(@"XcAM_XcodeColors: Unable to get newImplementation");
 		return nil;
 	}
 	
@@ -288,12 +288,12 @@ IMP ReplaceInstanceMethod(Class sourceClass, SEL sourceSel, Class destinationCla
 
 + (void)pluginDidLoad:(id)xcodeDirectCompatibility
 {
-	NSLog(@"XcodeColors: %@", NSStringFromSelector(_cmd));
+	NSLog(@"XcAM_XcodeColors: %@", NSStringFromSelector(_cmd));
 }
 
 - (void)registerLaunchSystemDescriptions
 {
-	NSLog(@"XcodeColors: %@", NSStringFromSelector(_cmd));
+	NSLog(@"XcAM_XcodeColors: %@", NSStringFromSelector(_cmd));
 }
 
 @end
