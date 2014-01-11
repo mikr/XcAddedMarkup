@@ -8,12 +8,13 @@
 #import "XcAMTypes.h"
 #import "XcAMFrameView.h"
 #import "XcAMPopoverViewController.h"
+#import "XcAMPopOver.h"
 
 
 @interface XcEmbeddedControls : NSObject  <NSPopoverDelegate> {
 	XcAMFrameView *_econtrolFrameView;
     XcAMPopoverViewController *_popoverViewController;
-    NSPopover *_popover;
+    XcAMPopOver *_popover;
 
     NSRange _ecKeypathRange;
     NSString *_ecKeypath;

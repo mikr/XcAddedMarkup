@@ -142,7 +142,7 @@ static XcEmbeddedControls *embeddedControls = nil;
     if (NSClassFromString(@"XcodeColors_NSTextStorage")) {
         XcodeColorsPluginPresent = YES;
     }
-    IMP_XcAM_NSTextStorage_fixAttributesInRange = XcAM_ReplaceInstanceMethod([NSTextStorage class], @selector(fixAttributesInRange:),
+    IMP_XcAM_NSTextStorage_fixAttributesInRange = (void *)XcAM_ReplaceInstanceMethod([NSTextStorage class], @selector(fixAttributesInRange:),
                                                                              [XcAM_XcodeColors_NSTextStorage class], @selector(fixAttributesInRange:));
     IMP_NSWorkspace_openURL = XcAM_ReplaceInstanceMethod([NSWorkspace class], @selector(openURL:),
                                                                    [XcAM_XcodeColors_NSTextStorage class], @selector(openURL:));

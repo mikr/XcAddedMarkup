@@ -6,6 +6,7 @@
 //
 
 #import "XcAMPopoverViewController.h"
+#import "XcAMTextField.h"
 
 static NSString *valueContext = @"XcAMPopoverViewController_value";
 
@@ -21,7 +22,7 @@ static NSString *valueContext = @"XcAMPopoverViewController_value";
         NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
         [numberFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
         
-        _textfield = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 4, 80, 32)];
+        _textfield = [[XcAMTextField alloc] initWithFrame:NSMakeRect(0, 4, 80, 32)];
         _textfield.formatter = numberFormatter;
         [_textfield setAutoresizingMask:NSViewHeightSizable | NSViewWidthSizable | NSViewMaxXMargin | NSViewMinXMargin];
 

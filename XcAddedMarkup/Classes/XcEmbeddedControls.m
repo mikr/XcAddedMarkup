@@ -225,14 +225,16 @@
     
     NSSize size = NSMakeSize(150, 30);
     if(! _popover) {
-        _popover = [[NSPopover alloc] init];
+        _popover = [[XcAMPopOver alloc] init];
     }
     __block NSResponder *previousFirstResponder = self.textView.window.firstResponder;
-    [[NSNotificationCenter defaultCenter] addObserverForName:NSPopoverDidShowNotification
-                                                      object:_popover queue:nil usingBlock:^(NSNotification *note) {
-                                                          [self.textView.window makeKeyWindow]; //Reclaim key from popover
-                                                          [self.textView.window makeFirstResponder:previousFirstResponder];
-                                                      }];
+    if (previousFirstResponder == self.textView) {
+        _popover.previousFirstResponder = previousFirstResponder;
+        _popover.previousKeyWindow = self.textView.window;
+    } else {
+        _popover.previousFirstResponder = nil;
+        _popover.previousKeyWindow = nil;
+    }
     
     _popover.contentViewController = _popoverViewController;
     _popover.contentSize = size;
@@ -242,6 +244,17 @@
     [_popover showRelativeToRect:kprect
                           ofView:self.econtrolFrameView
                    preferredEdge:NSMinYEdge];
+}
+
+- (void)popoverDidShow:(NSNotification *)notification
+{
+    XcAMPopOver *popover = notification.object;
+    if ([popover isKindOfClass:[XcAMPopOver class]]) {
+        if (popover.previousKeyWindow && popover.previousFirstResponder) {
+            [popover.previousKeyWindow makeKeyWindow];
+            [popover.previousKeyWindow makeFirstResponder:popover.previousFirstResponder];
+        }
+    }
 }
 
 - (NSRect)rectInViewForRange:(NSRange)range

@@ -24,6 +24,10 @@
 		4C8A31031858C54C004AB18D /* DVTSourceTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A31021858C54C004AB18D /* DVTSourceTextView.m */; };
 		4C8A310A1858E3B1004AB18D /* XcAMFrameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A31051858E3B1004AB18D /* XcAMFrameView.m */; };
 		4C8A310B1858E3B1004AB18D /* XcEmbeddedControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8A31071858E3B1004AB18D /* XcEmbeddedControls.m */; };
+		4C90E2EE18819B3000340B81 /* XcAMPopOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90E2ED18819B3000340B81 /* XcAMPopOver.m */; };
+		4C90E2EF18819B3000340B81 /* XcAMPopOver.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90E2ED18819B3000340B81 /* XcAMPopOver.m */; };
+		4C90E2F218819F9100340B81 /* XcAMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90E2F118819F9100340B81 /* XcAMTextField.m */; };
+		4C90E2F318819F9100340B81 /* XcAMTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C90E2F118819F9100340B81 /* XcAMTextField.m */; };
 		4CBCF3F41609137400C3E6B9 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBCF3EF1609136200C3E6B9 /* AppKit.framework */; };
 		4CBCF3F51609137400C3E6B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CBCF3F01609136200C3E6B9 /* Foundation.framework */; };
 		4CBCF3FC1609137E00C3E6B9 /* SimpleBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CBCF3F91609137E00C3E6B9 /* SimpleBase64.m */; };
@@ -60,6 +64,10 @@
 		4C8A31051858E3B1004AB18D /* XcAMFrameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcAMFrameView.m; sourceTree = "<group>"; };
 		4C8A31061858E3B1004AB18D /* XcEmbeddedControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcEmbeddedControls.h; sourceTree = "<group>"; };
 		4C8A31071858E3B1004AB18D /* XcEmbeddedControls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcEmbeddedControls.m; sourceTree = "<group>"; };
+		4C90E2EC18819B3000340B81 /* XcAMPopOver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcAMPopOver.h; sourceTree = "<group>"; };
+		4C90E2ED18819B3000340B81 /* XcAMPopOver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcAMPopOver.m; sourceTree = "<group>"; };
+		4C90E2F018819F9100340B81 /* XcAMTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcAMTextField.h; sourceTree = "<group>"; };
+		4C90E2F118819F9100340B81 /* XcAMTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XcAMTextField.m; sourceTree = "<group>"; };
 		4CBCF3EF1609136200C3E6B9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		4CBCF3F01609136200C3E6B9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4CBCF3F71609137E00C3E6B9 /* AttachEmbeddedImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttachEmbeddedImages.h; sourceTree = "<group>"; };
@@ -191,6 +199,10 @@
 				4C025636160A1D20002B9FC4 /* XcAddedMarkupPlugin.m */,
 				4C8A31041858E3B1004AB18D /* XcAMFrameView.h */,
 				4C8A31051858E3B1004AB18D /* XcAMFrameView.m */,
+				4C90E2EC18819B3000340B81 /* XcAMPopOver.h */,
+				4C90E2ED18819B3000340B81 /* XcAMPopOver.m */,
+				4C90E2F018819F9100340B81 /* XcAMTextField.h */,
+				4C90E2F118819F9100340B81 /* XcAMTextField.m */,
 				4C8A30F51858C44F004AB18D /* XcAMPopoverViewController.h */,
 				4C8A30F61858C44F004AB18D /* XcAMPopoverViewController.m */,
 				4C8A31061858E3B1004AB18D /* XcEmbeddedControls.h */,
@@ -243,7 +255,7 @@
 		4C51B0CD1608F2C100184490 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Michael Krause";
 			};
 			buildConfigurationList = 4C51B0D01608F2C100184490 /* Build configuration list for PBXProject "XcAddedMarkup" */;
@@ -295,6 +307,8 @@
 				4C8A310A1858E3B1004AB18D /* XcAMFrameView.m in Sources */,
 				4C0D9110160A34710068141C /* AttachEmbeddedImages.m in Sources */,
 				4C83B7EF160A4B9200E570DE /* SimpleBase64.m in Sources */,
+				4C90E2F318819F9100340B81 /* XcAMTextField.m in Sources */,
+				4C90E2EF18819B3000340B81 /* XcAMPopOver.m in Sources */,
 				4C6C4A111851C3FA00DF8A67 /* XcAM_XcodeColors.m in Sources */,
 				4C8A30FD1858C44F004AB18D /* XcAMPopoverViewController.m in Sources */,
 			);
@@ -304,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C90E2F218819F9100340B81 /* XcAMTextField.m in Sources */,
 				4CBCF3FC1609137E00C3E6B9 /* SimpleBase64.m in Sources */,
 				4C0B5CDC185911ED006FFA0D /* XcEmbeddedControls.m in Sources */,
 				4C0B5CDB185911ED006FFA0D /* XcAMFrameView.m in Sources */,
@@ -311,6 +326,7 @@
 				4C0B5CDE185911FE006FFA0D /* XcAMPopoverViewController.m in Sources */,
 				4C025637160A1D20002B9FC4 /* XcAddedMarkupPlugin.m in Sources */,
 				4C0D910F160A34710068141C /* AttachEmbeddedImages.m in Sources */,
+				4C90E2EE18819B3000340B81 /* XcAMPopOver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +355,6 @@
 		4C0D910A160A32690068141C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -354,7 +369,6 @@
 		4C0D910B160A32690068141C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -369,7 +383,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -389,7 +402,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -398,7 +411,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -419,7 +431,6 @@
 		4C51B0E51608F2C100184490 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
@@ -436,7 +447,6 @@
 		4C51B0E61608F2C100184490 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
