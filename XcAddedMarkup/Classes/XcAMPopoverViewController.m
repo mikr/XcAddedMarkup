@@ -76,15 +76,17 @@ static NSString *valueContext = @"XcAMPopoverViewController_value";
 
 - (void)setValue:(id)value
 {
-    [self willChangeValueForKey:@"value"];
-
     if (_ecType == XcECTypeInt) {
-        _value = @(round([value floatValue]));
+        if ([value respondsToSelector:@selector(floatValue)]) {
+            [self willChangeValueForKey:@"value"];
+            _value = @(round([value floatValue]));
+            [self didChangeValueForKey:@"value"];
+        }
     } else {
+        [self willChangeValueForKey:@"value"];
         _value = value;
+        [self didChangeValueForKey:@"value"];
     }
-
-    [self didChangeValueForKey:@"value"];
 }
 
 - (NSNumber *)value
