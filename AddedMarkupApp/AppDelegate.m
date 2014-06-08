@@ -46,7 +46,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    xec = [[XcEmbeddedControls alloc] init];
+    xec = XcEmbeddedControls.new;
     [xec applicationDidFinishLaunching:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(editedEnded:) name:NSTextStorageDidProcessEditingNotification object:nil];
@@ -56,9 +56,15 @@
     [self setTextContent];
 }
 
-- (NSString *)filenameForResource:(NSString *)resourceName
-{
-    return [[NSBundle mainBundle] pathForResource:resourceName ofType:nil];
+- (NSString *)filenameForResource:(NSString *)resourceName { NSImage *nsimage;
+
+  id filerep = [NSBundle.mainBundle pathForResource:resourceName ofType:nil];
+  return filerep ?: (nsimage = [NSImage imageNamed:resourceName]) ?
+    [nsimage.TIFFRepresentation writeToFile:
+      filerep = [[[NSProcessInfo.processInfo.arguments[0] stringByDeletingLastPathComponent]
+                                                stringByAppendingPathComponent:resourceName]
+                                                     stringByAppendingPathExtension:@"tiff"]
+                                                              atomically:YES], filerep : nil;
 }
 
 - (void)setTextContent
@@ -67,16 +73,20 @@
     NSURL *url1 = [[NSURL alloc] initFileURLWithPath:filename1 isDirectory:NO];
 
     NSString *imagestring1 = [self imageRefDefinition:url1.absoluteString zoomX:4 zoomY:4 interpolate:NO];
-    
+
+    NSString *dotMac = [NSString stringWithFormat:@"∂i!!%@ƒi",[self filenameForResource:NSImageNameDotMac]];
+
     NSString *link1 = AMLinkWithTitle(@"http://apple.com", @"Apple");
     NSString *fn = filename1;
     NSString *text = [NSString stringWithFormat:@"∂i!!%@ƒi \n %@ %@ %@\n", fn, DebugDecorateGREEN(@"Apple"), link1, DebugDecorateBLUE(@"Apple")];
     text = [text stringByAppendingString:@"\n\n\n// RLOGetInt(@\"num_triangles\", 36);\n"];
     text = [text stringByAppendingString:@"// RLOGetFloat(@\"num_triangles\", 36);\n"];
-    
+    text = [text stringByAppendingFormat:@"\n\n%@", dotMac];
+
     NSString *text2 = [NSString stringWithFormat:@"Test zooming image: %@", imagestring1];
     NSLog(@"%@", text);
     NSLog(@"%@", text2);
+    NSLog(@"%@", dotMac);
     NSLogGREEN(@"All is well!");
     [self.textView setString:text];
 }
