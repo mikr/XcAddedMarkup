@@ -56,9 +56,37 @@
     [self setTextContent];
 }
 
+/*
+ * XcAddedMarkup has no API to generate the appropriate markup given an NSImage, every
+ * application that wants to display an image inside Xcode needs to create an image file in a place which can be read from Xcode
+ * for example TMPDIR.
+ * Here are a few examples how to do this.
+ */
+
 - (NSString *)filenameForResource:(NSString *)resourceName
 {
     return [[NSBundle mainBundle] pathForResource:resourceName ofType:nil];
+}
+
+- (NSString *)filenameForNSImage:(NSImage *)image
+{
+    NSString *guid = [[NSProcessInfo processInfo] globallyUniqueString] ;
+    NSString *tmpfilename = [NSTemporaryDirectory() stringByAppendingPathComponent:[guid stringByAppendingPathExtension:@"tiff"]];
+    if (! [image.TIFFRepresentation writeToFile:tmpfilename atomically:NO]) {
+        return nil;
+    }
+    
+    return tmpfilename;
+}
+
+- (NSString *)filenameForImageNamed:(NSString *)name
+{
+    NSImage *image = [NSImage imageNamed:name];
+    if (! image) {
+        return nil;
+    }
+    
+    return [self filenameForNSImage:image];
 }
 
 - (void)setTextContent
@@ -67,16 +95,19 @@
     NSURL *url1 = [[NSURL alloc] initFileURLWithPath:filename1 isDirectory:NO];
 
     NSString *imagestring1 = [self imageRefDefinition:url1.absoluteString zoomX:4 zoomY:4 interpolate:NO];
-    
+    NSString *system_entity_image = [NSString stringWithFormat:@"∂i!!%@ƒi", [self filenameForImageNamed:NSImageNameNetwork]];
+
     NSString *link1 = AMLinkWithTitle(@"http://apple.com", @"Apple");
     NSString *fn = filename1;
     NSString *text = [NSString stringWithFormat:@"∂i!!%@ƒi \n %@ %@ %@\n", fn, DebugDecorateGREEN(@"Apple"), link1, DebugDecorateBLUE(@"Apple")];
     text = [text stringByAppendingString:@"\n\n\n// RLOGetInt(@\"num_triangles\", 36);\n"];
     text = [text stringByAppendingString:@"// RLOGetFloat(@\"num_triangles\", 36);\n"];
-    
+    text = [text stringByAppendingFormat:@"\n\n%@", system_entity_image];
+
     NSString *text2 = [NSString stringWithFormat:@"Test zooming image: %@", imagestring1];
     NSLog(@"%@", text);
     NSLog(@"%@", text2);
+    NSLog(@"%@", system_entity_image);
     NSLogGREEN(@"All is well!");
     [self.textView setString:text];
 }

@@ -259,7 +259,7 @@
 
 - (NSRect)rectInViewForRange:(NSRange)range
 {
-    NSRect rectOnScreen = [self.textView firstRectForCharacterRange:range];
+    NSRect rectOnScreen = [self.textView firstRectForCharacterRange:range actualRange:nil];
     NSRect rectInWindow = [self.textView.window convertRectFromScreen:rectOnScreen];
     NSRect rectInView = [self.textView convertRect:rectInWindow fromView:nil];
     return rectInView;
