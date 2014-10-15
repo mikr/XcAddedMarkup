@@ -7,6 +7,7 @@
 
 #import "AttachEmbeddedImages.h"
 
+#define kXcAddedMarkupCustomLinkBackgroundDisabled   @"XcAddedMarkupCustomLinkBackgroundDisabled"
 
 @interface EnhancedAttachmentCell : NSTextAttachmentCell {
     BOOL interpolate;
@@ -212,6 +213,8 @@
 - (void)attachEmbeddedLinks:(NSTextStorage *)textStorage textStorageRange:(NSRange)textStorageRange
 {
     BOOL began_editing = NO;
+    BOOL custombg_disabled_valid = NO;
+    BOOL custombg_disabled = NO;
 
     do {
         NSString *text_string = [textStorage string];
@@ -265,16 +268,22 @@
         }
         [textStorage addAttribute:NSLinkAttributeName value:url range:title_range];
 
-        NSString *linkbody = [text_string substringWithRange:title_range];
-        NSCharacterSet *wcSet = [NSCharacterSet whitespaceCharacterSet];
-        linkbody = [linkbody stringByTrimmingCharactersInSet:wcSet];
-        [textStorage addAttribute:NSLinkAttributeName value:url range:title_range];
-        if ([linkbody length] > 0) {
-            if (!([linkbody hasPrefix:EMBEDDED_IMAGE_START] && [linkbody hasSuffix:EMBEDDED_IMAGE_END])) {
-                // If there is non-whitespace text behind the link we use a white background color
-                // to make the normally blue link text readable.
-                // A purely whitespace text or no text could be an image which we don't want to have a white below itself.
-                [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor whiteColor] range:title_range];
+        if (! custombg_disabled_valid) {
+            custombg_disabled = [[NSUserDefaults standardUserDefaults] boolForKey:kXcAddedMarkupCustomLinkBackgroundDisabled];
+            custombg_disabled_valid = YES;
+        }
+        
+        if (custombg_disabled) {
+            NSString *linkbody = [text_string substringWithRange:title_range];
+            NSCharacterSet *wcSet = [NSCharacterSet whitespaceCharacterSet];
+            linkbody = [linkbody stringByTrimmingCharactersInSet:wcSet];
+            if ([linkbody length] > 0) {
+                if (!([linkbody hasPrefix:EMBEDDED_IMAGE_START] && [linkbody hasSuffix:EMBEDDED_IMAGE_END])) {
+                    // If there is non-whitespace text behind the link we use a white background color
+                    // to make the normally blue link text readable.
+                    // A purely whitespace text or no text could be an image which we don't want to have a white below itself.
+                    [textStorage addAttribute:NSBackgroundColorAttributeName value:[NSColor whiteColor] range:title_range];
+                }
             }
         }
 

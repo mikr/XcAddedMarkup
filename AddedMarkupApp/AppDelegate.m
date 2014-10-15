@@ -103,6 +103,7 @@
     text = [text stringByAppendingString:@"\n\n\n// RLOGetInt(@\"num_triangles\", 36);\n"];
     text = [text stringByAppendingString:@"// RLOGetFloat(@\"num_triangles\", 36);\n"];
     text = [text stringByAppendingFormat:@"\n\n%@", system_entity_image];
+    text = [text stringByAppendingFormat:@"\n\n%@%@%@%@\n", XCODE_COLORS_ESCAPE, @"bg0,255,0;", link1, XCODE_COLORS_RESET];
 
     NSString *text2 = [NSString stringWithFormat:@"Test zooming image: %@", imagestring1];
     NSLog(@"%@", text);

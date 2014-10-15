@@ -56,6 +56,7 @@ defaults write com.apple.dt.Xcode XcAddedMarkupImagesDisabled -bool yes
 defaults write com.apple.dt.Xcode XcAddedMarkupLinksDisabled -bool yes
 defaults write com.apple.dt.Xcode XcAddedMarkupAnsiColorsDisabled -bool yes
 defaults write com.apple.dt.Xcode XcAddedMarkupEmbeddedControlsDisabled -bool yes
+defaults write com.apple.dt.Xcode XcAddedMarkupCustomLinkBackgroundDisabled -bool yes
 ```
 ## RestartLessOften
 
@@ -68,7 +69,7 @@ In addition to links and image XcAddedMarkup also support [RestartLessOften](htt
 
 ## Requirements
 
-Xcode 5. Although XcAddedMarkup ran fine with Xcode 4, I am no longer testing with older versions of Xcode.
+Xcode 5 or 6. Although XcAddedMarkup ran fine with Xcode 4, I am no longer testing with older versions of Xcode.
 
 
 ## Usage
