@@ -24,10 +24,10 @@
 // File references simply go between angle brackets. These are always opened in Xcode.
 // Don't modify these two files after clicking on the links, they live in /Applications/Xcode.app
 // ∂a![Info.plist]</Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/Info.plist>ƒa
-// ∂a![Objective-C file]</Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File Templates/Cocoa Touch/Objective-C test case class.xctemplate/SenTestCase/___FILEBASENAME___.m>ƒa
+// ∂a![Objective-C file]</Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File Templates/Source/Test Case Class.xctemplate/XCTestCaseObjective-C/___FILEBASENAME___.m>ƒa
 
 // To show the filename together with the title, drop the '!' after the ∂a, the title is still clickable.
-// ∂a[Objective-C file]</Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File Templates/Cocoa Touch/Objective-C test case class.xctemplate/SenTestCase/___FILEBASENAME___.m>ƒa
+// ∂a[Objective-C file]</Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/File Templates/Source/Test Case Class.xctemplate/XCTestCaseObjective-C/___FILEBASENAME___.m>ƒa
 
 #endif
 #endif
