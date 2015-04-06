@@ -25,12 +25,13 @@ In both cases as soon as the markup is recognized it is replaced by its graphica
 
 ## Examples
 
+```
 ∂i!!(2.0, 2.0, 0)/Applications/Safari.app/Contents/Resources/ExtensionDefaultIcon64.pngƒi
 
 ∂i!!(0.5)@ref="http://imgs.xkcd.com/comics/compiling.png"ƒi
 
 ∂a![Apple]<http://apple.com>ƒa
-
+```
 
 Without exclamation marks the markup used to display the image or link is shown as well. Adding two exclamation marks for an image or one exclamation mark for a link suppresses this "view source" default mode.
 
